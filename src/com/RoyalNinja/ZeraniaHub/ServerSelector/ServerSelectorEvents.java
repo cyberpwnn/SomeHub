@@ -38,7 +38,15 @@ public class ServerSelectorEvents implements Listener
 		{
 			e.setCancelled(true);
 			
-			if((e.getCurrentItem() == null) || (e.getInventory().getItem(e.getSlot()) == null))
+			try
+			{
+				if((e.getCurrentItem() == null) || (e.getInventory().getItem(e.getSlot()) == null))
+				{
+					return;
+				}
+			} 
+			
+			catch(Exception ex)
 			{
 				return;
 			}
