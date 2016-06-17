@@ -1,0 +1,5 @@
+name: ZeraniaHub
+version: 1.0
+main: com.RoyalNinja.ZeraniaHub.Main
+description: ZeraniaHub plugin.
+depend: [ProtocolLib]
