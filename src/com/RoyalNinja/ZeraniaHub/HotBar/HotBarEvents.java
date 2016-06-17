@@ -16,6 +16,7 @@ import com.RoyalNinja.ZeraniaHub.Main;
 
 public class HotBarEvents implements Listener
 {
+	@SuppressWarnings("deprecation")
 	public static ItemStack getItemStack(String itemId)
 	{
 		String[] parts = itemId.split(":");
@@ -38,7 +39,7 @@ public class HotBarEvents implements Listener
 		ItemStack visi = getItemStack(config.getString("HotBar.Items.PlayerVisibility.ItemID"));
 		ItemMeta visiMeta = visi.getItemMeta();
 		visiMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString("HotBar.Items.PlayerVisibility.Name")));
-		ArrayList<String> visiLore = new ArrayList();
+		ArrayList<String> visiLore = new ArrayList<String>();
 		for(String s : config.getStringList("HotBar.Items.PlayerVisibility.Lore"))
 		{
 			visiLore.add(ChatColor.translateAlternateColorCodes('&', s));
@@ -49,7 +50,7 @@ public class HotBarEvents implements Listener
 		ItemStack server = getItemStack(config.getString("ServerSelector.ItemID"));
 		ItemMeta serverMeta = server.getItemMeta();
 		serverMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString("HotBar.Items.ServerSelector.Name")));
-		ArrayList<String> serverLore = new ArrayList();
+		ArrayList<String> serverLore = new ArrayList<String>();
 		for(String s : config.getStringList("HotBar.Items.ServerSelector.Lore"))
 		{
 			serverLore.add(ChatColor.translateAlternateColorCodes('&', s));
@@ -60,7 +61,7 @@ public class HotBarEvents implements Listener
 		ItemStack trail = getItemStack(config.getString("HotBar.Items.Cosmetics.ItemID"));
 		ItemMeta trailMeta = trail.getItemMeta();
 		trailMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString("HotBar.Items.Cosmetics.Name")));
-		ArrayList<String> trailLore = new ArrayList();
+		ArrayList<String> trailLore = new ArrayList<String>();
 		for(String s : config.getStringList("HotBar.Items.Cosmetics.Lore"))
 		{
 			trailLore.add(ChatColor.translateAlternateColorCodes('&', s));
@@ -71,7 +72,7 @@ public class HotBarEvents implements Listener
 		ItemStack hook = new ItemStack(Material.FISHING_ROD);
 		ItemMeta hookMeta = hook.getItemMeta();
 		hookMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString("HotBar.Items.GrapplingHook.Name")));
-		ArrayList<String> hookLore = new ArrayList();
+		ArrayList<String> hookLore = new ArrayList<String>();
 		for(String s : config.getStringList("HotBar.Items.GrapplingHook.Lore"))
 		{
 			hookLore.add(ChatColor.translateAlternateColorCodes('&', s));

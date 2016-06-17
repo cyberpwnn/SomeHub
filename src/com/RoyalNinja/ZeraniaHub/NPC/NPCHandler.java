@@ -25,7 +25,7 @@ import net.minecraft.server.v1_8_R3.WorldServer;
 
 public class NPCHandler
 {
-	static ArrayList<EntityPlayer> npcList = new ArrayList();
+	static ArrayList<EntityPlayer> npcList = new ArrayList<EntityPlayer>();
 	
 	public static EntityPlayer getNPC(String name, String uuid)
 	{

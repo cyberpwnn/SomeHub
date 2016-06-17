@@ -22,8 +22,9 @@ import net.md_5.bungee.api.ChatColor;
 
 public class FeatureEvents implements org.bukkit.event.Listener
 {
-	public static HashMap<String, Boolean> playersHidden = new HashMap();
+	public static HashMap<String, Boolean> playersHidden = new HashMap<String, Boolean>();
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e)
 	{
@@ -84,8 +85,6 @@ public class FeatureEvents implements org.bukkit.event.Listener
 	@EventHandler
 	public void onPlayerDeath(PlayerDeathEvent e)
 	{
-		Player p = e.getEntity();
-		
 		e.setDroppedExp(0);
 		e.getDrops().clear();
 	}

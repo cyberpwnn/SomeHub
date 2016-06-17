@@ -32,9 +32,9 @@ public class BalancerHandler
 	{
 		List<String> hubs = Main.plugin.getConfig().getStringList("HubBalancer.Hubs");
 		
-		HashMap<Integer, String> lowestHub = new HashMap();
+		HashMap<Integer, String> lowestHub = new HashMap<Integer, String>();
 		
-		ArrayList<Integer> hubPops = new ArrayList();
+		ArrayList<Integer> hubPops = new ArrayList<Integer>();
 		
 		for(String s : hubs)
 		{
@@ -79,10 +79,8 @@ public class BalancerHandler
 			
 			String[] data = str.toString().split("§");
 			
-			String motd = data[0];
 			int onlinePlayers = Integer.valueOf(data[1]).intValue();
-			int maxPlayers = Integer.valueOf(data[2]).intValue();
-			
+			socket.close();
 			return Integer.valueOf(onlinePlayers);
 		} catch(Exception e)
 		{

@@ -18,6 +18,7 @@ import com.RoyalNinja.ZeraniaHub.Main;
 
 public class NPCEvents implements Listener
 {
+	@SuppressWarnings("deprecation")
 	public static boolean isFacingNPC(Player p, Location npcLoc, int distance)
 	{
 		List<Block> lineOfSight = new ArrayList<Block>();
@@ -42,6 +43,7 @@ public class NPCEvents implements Listener
 		NPCHandler.updateAllNPCPackets(p);
 	}
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void useNPCCommand(PlayerInteractEvent e)
 	{

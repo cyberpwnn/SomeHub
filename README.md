@@ -1,1 +1,1 @@
-Zerania Hub plugin
+# SomeHub

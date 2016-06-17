@@ -17,6 +17,7 @@ public class CosmeticsGUI
 {
 	static HashMap<String, String> trails = CosmeticsHandler.trailsActive;
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack getItemStack(String itemId)
 	{
 		String[] parts = itemId.split(":");
@@ -44,7 +45,7 @@ public class CosmeticsGUI
 			
 			meta.setDisplayName(net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Cosmetics.Items." + configName + ".Name")));
 			
-			ArrayList<String> lore = new ArrayList();
+			ArrayList<String> lore = new ArrayList<String>();
 			
 			for(String s : Main.plugin.getConfig().getStringList("Cosmetics.Items." + configName + ".Lore"))
 			{
@@ -71,7 +72,7 @@ public class CosmeticsGUI
 				
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_GRAY + "Explode Trail");
 				
@@ -88,7 +89,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_GRAY + "Explode Trail");
 				
@@ -107,7 +108,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_GRAY + "Explode Trail");
 			
@@ -128,7 +129,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Firework Trail");
 				
@@ -145,7 +146,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Firework Trail");
 				
@@ -164,7 +165,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Firework Trail");
 			
@@ -185,7 +186,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.LIGHT_PURPLE + "Crit Trail");
 				
@@ -202,7 +203,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.LIGHT_PURPLE + "Crit Trail");
 				
@@ -220,7 +221,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.LIGHT_PURPLE + "Crit Trail");
 			
@@ -241,7 +242,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.BLACK + "Smoke Trail");
 				
@@ -258,7 +259,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.BLACK + "Smoke Trail");
 				
@@ -276,7 +277,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.BLACK + "Smoke Trail");
 			
@@ -297,7 +298,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_PURPLE + "Portal Trail");
 				
@@ -314,7 +315,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_PURPLE + "Portal Trail");
 				
@@ -332,7 +333,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.DARK_PURPLE + "Portal Trail");
 			
@@ -353,7 +354,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Flame Trail");
 				
@@ -370,7 +371,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Flame Trail");
 				
@@ -388,7 +389,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Flame Trail");
 			
@@ -409,7 +410,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Cloud Trail");
 				
@@ -426,7 +427,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Cloud Trail");
 				
@@ -444,7 +445,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GRAY + "Cloud Trail");
 			
@@ -465,7 +466,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GREEN + "Slime Trail");
 				
@@ -482,7 +483,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GREEN + "Slime Trail");
 				
@@ -500,7 +501,7 @@ public class CosmeticsGUI
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.GREEN + "Slime Trail");
 			
@@ -521,7 +522,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.InuseItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Heart Trail");
 				
@@ -538,7 +539,7 @@ public class CosmeticsGUI
 			{
 				ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.UnlockedItem.ID"));
 				ItemMeta itemMeta = item.getItemMeta();
-				List<String> itemLore = new ArrayList();
+				List<String> itemLore = new ArrayList<String>();
 				
 				itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Heart Trail");
 				
@@ -552,11 +553,13 @@ public class CosmeticsGUI
 				
 				i.addItem(new ItemStack[] { item });
 			}
-		} else
+		}
+		
+		else
 		{
 			ItemStack item = getItemStack(Main.plugin.getConfig().getString("Trails.GUI.LockedItem.ID"));
 			ItemMeta itemMeta = item.getItemMeta();
-			List<String> itemLore = new ArrayList();
+			List<String> itemLore = new ArrayList<String>();
 			
 			itemMeta.setDisplayName(net.md_5.bungee.api.ChatColor.RED + "Heart Trail");
 			

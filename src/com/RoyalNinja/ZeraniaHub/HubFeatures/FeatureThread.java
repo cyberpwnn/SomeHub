@@ -9,9 +9,9 @@ import org.bukkit.potion.PotionEffectType;
 
 import com.RoyalNinja.ZeraniaHub.Main;
 
-public class FeatureThread extends org.bukkit.scheduler.BukkitRunnable
+public class FeatureThread implements Runnable
 {
-	public static HashMap<String, Integer> doubleJumpCooldown = new HashMap();
+	public static HashMap<String, Integer> doubleJumpCooldown = new HashMap<String, Integer>();
 	
 	public void run()
 	{

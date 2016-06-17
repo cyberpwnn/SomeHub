@@ -25,7 +25,7 @@ public class BookHandler
 		BookMeta bm = (BookMeta) book.getItemMeta();
 		bm.setAuthor(ChatColor.translateAlternateColorCodes('&', author));
 		bm.setTitle(ChatColor.translateAlternateColorCodes('&', title));
-		ArrayList<String> pages = new ArrayList();
+		ArrayList<String> pages = new ArrayList<String>();
 		
 		for(int i = 0; i < totalPages.intValue(); i++)
 		{

@@ -4,7 +4,7 @@ import org.bukkit.entity.Player;
 
 import com.RoyalNinja.ZeraniaHub.ParticleLib.ParticleEffect;
 
-public class TrailsThread extends org.bukkit.scheduler.BukkitRunnable
+public class TrailsThread implements Runnable
 {
 	public void run()
 	{

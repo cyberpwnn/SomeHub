@@ -22,7 +22,6 @@ import com.RoyalNinja.ZeraniaHub.NPC.NPCHandler;
 import com.RoyalNinja.ZeraniaHub.PlayerStacker.PlayerStackerEvents;
 import com.RoyalNinja.ZeraniaHub.Portals.PortalEvents;
 import com.RoyalNinja.ZeraniaHub.ServerSelector.ServerSelectorEvents;
-import com.comphenix.protocol.ProtocolManager;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
@@ -35,7 +34,6 @@ public class Main extends JavaPlugin implements PluginMessageListener
 	public static Plugin plugin;
 	public static int FeatureTimer;
 	public static int TrailsTimer;
-	private ProtocolManager protocolManager;
 	
 	public void onEnable()
 	{
@@ -56,16 +54,16 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		getConfig().addDefault("PlayerVisibility.UseMessageOn", "&bPlayers are now visible again!");
 		getConfig().addDefault("PlayerVisibility.UseMessageOff", "&cPlayers are no longer visible!");
 		
-		ArrayList<String> serverItems = new ArrayList();
-		ArrayList<String> GUILore = new ArrayList();
+		ArrayList<String> serverItems = new ArrayList<String>();
+		ArrayList<String> GUILore = new ArrayList<String>();
 		
-		ArrayList<String> lockedLore = new ArrayList();
-		ArrayList<String> unlockedLore = new ArrayList();
-		ArrayList<String> inuseLore = new ArrayList();
+		ArrayList<String> lockedLore = new ArrayList<String>();
+		ArrayList<String> unlockedLore = new ArrayList<String>();
+		ArrayList<String> inuseLore = new ArrayList<String>();
 		
-		ArrayList<String> NPCList = new ArrayList();
+		ArrayList<String> NPCList = new ArrayList<String>();
 		
-		ArrayList<String> hubs = new ArrayList();
+		ArrayList<String> hubs = new ArrayList<String>();
 		
 		GUILore.add("&bClick to join the Example Server");
 		serverItems.add("ExampleServer");
@@ -125,10 +123,10 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		getConfig().addDefault("InfoBook.Pages.3", "&7This is the fourth page");
 		getConfig().addDefault("InfoBook.Pages.4", "&dThis is the fifth page");
 		
-		ArrayList<String> visiLore = new ArrayList();
-		ArrayList<String> serverLore = new ArrayList();
-		ArrayList<String> cosmeticsLore = new ArrayList();
-		ArrayList<String> hookLore = new ArrayList();
+		ArrayList<String> visiLore = new ArrayList<String>();
+		ArrayList<String> serverLore = new ArrayList<String>();
+		ArrayList<String> cosmeticsLore = new ArrayList<String>();
+		ArrayList<String> hookLore = new ArrayList<String>();
 		
 		visiLore.add("&cUse to toggle player visibility");
 		serverLore.add("&cUse to select a server to connect to");
@@ -157,9 +155,9 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		getConfig().addDefault("HotBar.Arrangement.8", "GrapplingHook");
 		getConfig().addDefault("HotBar.Arrangement.9", "Filler");
 		
-		ArrayList<String> trailLore = new ArrayList();
+		ArrayList<String> trailLore = new ArrayList<String>();
 		
-		ArrayList<String> customLore = new ArrayList();
+		ArrayList<String> customLore = new ArrayList<String>();
 		
 		trailLore.add(ChatColor.RED + "Click to open the Trail Selection GUI");
 		
@@ -170,7 +168,7 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		getConfig().addDefault("Cosmetics.Items.Filler.ItemID", "102");
 		getConfig().addDefault("Cosmetics.Items.Filler.Name", "&cFiller");
 		
-		ArrayList<String> customItems = new ArrayList();
+		ArrayList<String> customItems = new ArrayList<String>();
 		
 		customItems.add("CustomItem");
 		

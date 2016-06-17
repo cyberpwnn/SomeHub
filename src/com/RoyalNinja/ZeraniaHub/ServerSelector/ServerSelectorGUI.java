@@ -15,6 +15,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class ServerSelectorGUI
 {
+	@SuppressWarnings("deprecation")
 	public static ItemStack getItemStack(String itemId)
 	{
 		String[] parts = itemId.split(":");
@@ -44,7 +45,7 @@ public class ServerSelectorGUI
 			
 			meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString("ServerSelector.Items." + configItem + ".Name")));
 			
-			ArrayList<String> lore = new ArrayList();
+			ArrayList<String> lore = new ArrayList<String>();
 			
 			for(String s : config.getStringList("ServerSelector.Items." + configItem + ".Lore"))
 			{

@@ -38,6 +38,7 @@ public class CosmeticsEvents implements org.bukkit.event.Listener
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	@org.bukkit.event.EventHandler
 	public void onTrailsOpen(org.bukkit.event.player.PlayerInteractEvent e)
 	{
@@ -56,6 +57,7 @@ public class CosmeticsEvents implements org.bukkit.event.Listener
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack getItemStack(String itemId)
 	{
 		String[] parts = itemId.split(":");
@@ -91,6 +93,7 @@ public class CosmeticsEvents implements org.bukkit.event.Listener
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	@org.bukkit.event.EventHandler
 	public void playerSelectTrail(InventoryClickEvent e)
 	{

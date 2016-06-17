@@ -17,7 +17,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class BalancerEvents implements Listener
 {
-	HashMap<String, String> connectedPort = new HashMap();
+	HashMap<String, String> connectedPort = new HashMap<String, String>();
 	
 	@EventHandler
 	public void onPlayerLoginBalance(PlayerLoginEvent e)
