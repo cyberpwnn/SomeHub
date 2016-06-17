@@ -65,6 +65,7 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		{
 			return;
 		}
+		
 		ByteArrayDataInput in = ByteStreams.newDataInput(message);
 		String subchannel = in.readUTF();
 		subchannel.equals("PlayerCount");

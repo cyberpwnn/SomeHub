@@ -39,7 +39,6 @@ public class NPCEvents implements Listener
 	public void onRegisterNPCPacket(PlayerJoinEvent e)
 	{
 		Player p = e.getPlayer();
-		
 		NPCHandler.updateAllNPCPackets(p);
 	}
 	
@@ -48,11 +47,8 @@ public class NPCEvents implements Listener
 	public void useNPCCommand(PlayerInteractEvent e)
 	{
 		Player p = e.getPlayer();
-		
 		Block clicked = p.getTargetBlock((HashSet<Byte>)null, 2);
-		
 		FileConfiguration config = Main.plugin.getConfig();
-		
 		List<String> allNpcs = config.getStringList("NPC.NPCList");
 		
 		for(String npcs : allNpcs)
@@ -64,9 +60,7 @@ public class NPCEvents implements Listener
 				if(isFacingNPC(p, npcLocation, 2))
 				{
 					String command = config.getString("NPC." + npcs + ".Command").replaceAll("%player%", p.getName());
-					
 					Bukkit.getServer().broadcastMessage(command);
-					
 					Bukkit.getServer().dispatchCommand(p, command);
 				}
 			}
