@@ -60,11 +60,10 @@ public class ServerSelectorEvents implements Listener
 				
 				if(ChatColor.translateAlternateColorCodes('&', config.getString("ServerSelector.Items." + configItem + ".Name")).equals(e.getCurrentItem().getItemMeta().getDisplayName()))
 				{
+					System.out.println("SENDING: " + p.getName() + " <> " + bungeeServerName);
 					ByteArrayDataOutput out = ByteStreams.newDataOutput();
-					
 					out.writeUTF("Connect");
 					out.writeUTF(bungeeServerName);
-					
 					p.sendPluginMessage(Main.plugin, "BungeeCord", out.toByteArray());
 				}
 			}
