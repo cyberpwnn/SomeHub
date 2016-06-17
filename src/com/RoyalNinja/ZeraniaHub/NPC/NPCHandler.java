@@ -59,7 +59,10 @@ public class NPCHandler
 	public static void updateAllNPCPackets(Player p)
 	{
 		if(npcList.size() <= 0)
+		{
 			return;
+		}
+		
 		for(EntityPlayer npcs : npcList)
 		{
 			PlayerConnection connection = ((CraftPlayer) p).getHandle().playerConnection;
