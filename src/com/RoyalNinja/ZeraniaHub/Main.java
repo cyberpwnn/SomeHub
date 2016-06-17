@@ -108,7 +108,6 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		getConfig().addDefault("PlayerVisibility.ItemID", Integer.valueOf(2));
 		getConfig().addDefault("PlayerVisibility.UseMessageOn", "&bPlayers are now visible again!");
 		getConfig().addDefault("PlayerVisibility.UseMessageOff", "&cPlayers are no longer visible!");
-		ArrayList<String> serverItems = new ArrayList<String>();
 		ArrayList<String> GUILore = new ArrayList<String>();
 		ArrayList<String> lockedLore = new ArrayList<String>();
 		ArrayList<String> unlockedLore = new ArrayList<String>();
@@ -116,7 +115,6 @@ public class Main extends JavaPlugin implements PluginMessageListener
 		ArrayList<String> NPCList = new ArrayList<String>();
 		ArrayList<String> hubs = new ArrayList<String>();
 		GUILore.add("&bClick to join the Example Server");
-		serverItems.add("ExampleServer");
 		getConfig().addDefault("PlayerStackerThrowStrength", Double.valueOf(3.0D));
 		getConfig().addDefault("ServerSelector.ItemID", "345");
 		getConfig().addDefault("ServerSelector.Items.ExampleServer.BungeeName", "lobby");
