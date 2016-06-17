@@ -21,7 +21,7 @@ public class ServerSelectorEvents implements Listener
 	public void onPlayerInteract(PlayerInteractEvent e)
 	{
 		Player p = e.getPlayer();
-
+		
 		if(p.getItemInHand().getType().equals(Material.getMaterial(Integer.valueOf(Main.plugin.getConfig().getString("ServerSelector.ItemID")))))
 		{
 			p.openInventory(ServerSelectorGUI.getServerSelectorGUI());
@@ -33,22 +33,26 @@ public class ServerSelectorEvents implements Listener
 	public void onPlayerServerSelect(InventoryClickEvent e)
 	{
 		Player p = (Player) e.getWhoClicked();
-		
+				
 		if(e.getInventory().getName().equals(ChatColor.AQUA + "Server Selector"))
 		{
 			e.setCancelled(true);
 			
 			if((e.getCurrentItem() == null) || (e.getInventory().getItem(e.getSlot()) == null))
+			{
 				return;
+			}
+			
 			if((!e.getCurrentItem().hasItemMeta()) || (!e.getCurrentItem().getItemMeta().hasDisplayName()))
 			{
 				return;
 			}
+			
 			FileConfiguration config = Main.plugin.getConfig();
 			
 			for(int i = 0; i < config.getInt("ServerSelector.Inventory.Size"); i++)
 			{
-				int x = i + 1;
+				int x = i;
 				
 				String configItem = config.getString("ServerSelector.Inventory.Arrangement." + x);
 				
@@ -56,15 +60,17 @@ public class ServerSelectorEvents implements Listener
 				{
 					return;
 				}
+				
 				String bungeeServerName = config.getString("ServerSelector.Items." + configItem + ".BungeeName");
 				
 				if(ChatColor.translateAlternateColorCodes('&', config.getString("ServerSelector.Items." + configItem + ".Name")).equals(e.getCurrentItem().getItemMeta().getDisplayName()))
 				{
-					System.out.println("SENDING: " + p.getName() + " <> " + bungeeServerName);
 					ByteArrayDataOutput out = ByteStreams.newDataOutput();
-					out.writeUTF("Connect");
+					out.writeUTF("ConnectOther");
+					out.writeUTF(p.getName());
 					out.writeUTF(bungeeServerName);
 					p.sendPluginMessage(Main.plugin, "BungeeCord", out.toByteArray());
+					return;
 				}
 			}
 		}
